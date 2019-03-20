@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+textarea {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 50%;
+}

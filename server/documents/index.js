@@ -1,12 +1,8 @@
 module.exports = ({ nome, materia, titulo, conteudo }) => {
    const today = new Date()
-   const paragrafos = conteudo.split("\n")
    const handleParagrafos = () => {
-      return paragrafos.map(p => {
-         if(p.length > 0){
-            return `<p>${p}</p> `
-         }
-      })
+      const ph = conteudo.replace(/(\r\n|\n|\r)/gm, "<br />");
+      return ph
    }
 return `
     <!doctype html>
@@ -20,8 +16,9 @@ return `
                   margin-left: 5%;
                   padding-top: 5%;
                }
-               p {
+               #content {
                   text-align: justify;
+                  font-size: 10px;
                }
           </style>
        </head>
@@ -34,7 +31,9 @@ return `
             </div>
             <div id="conteudo">
                <h1>${titulo}</h1>
-               ${handleParagrafos()}
+               <div id="content">
+                  ${handleParagrafos()}
+               </div>
             </div>
          </div>
        </body>
