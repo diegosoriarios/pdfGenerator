@@ -11,6 +11,9 @@ return `
           <meta charset="utf-8">
           <title>PDF Result Template</title>
           <style>
+               body{
+                  height:100vh;
+               }
                .invoice-box {
                   width: 93%;
                   margin-left: 5%;
@@ -19,6 +22,9 @@ return `
                #content {
                   text-align: justify;
                   font-size: 10px;
+               }
+               h1 {
+                  text-align: center;
                }
           </style>
        </head>
