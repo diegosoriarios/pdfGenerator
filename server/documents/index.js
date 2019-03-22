@@ -17,7 +17,6 @@ return `
                .invoice-box {
                   width: 93%;
                   margin-left: 5%;
-                  padding-top: 5%;
                }
                #content {
                   text-align: justify;
@@ -30,6 +29,7 @@ return `
        </head>
        <body>
           <div class="invoice-box">
+            <div id="pageHeader"></div>
             <div id="cabecalho">
                <p>Nome: ${nome}</p>
                <p>Aula: ${materia}</p>
@@ -41,6 +41,7 @@ return `
                   ${handleParagrafos()}
                </div>
             </div>
+            <div id="pageFooter"></div>
          </div>
        </body>
     </html>
